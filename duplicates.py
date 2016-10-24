@@ -1,4 +1,5 @@
 def remove_duplicates(data):
+
     """
     Removes duplicate elements from given sequence:
     >>> remove_duplicates('abcdaefbg')
@@ -23,7 +24,13 @@ def remove_duplicates(data):
     Returns:
         List with all duplicates removed
     """
-    return
+    uniq = []
+    [uniq.append(item) for item in data if item not in uniq]
+       
+    return uniq
+    
+
+
 
 
 def get_duplicates(data):
@@ -43,7 +50,13 @@ def get_duplicates(data):
     Returns:
         Dictionary with duplicate values as keys, occurence count as values
     """
-    return
+  
+    result = {item: data.count(item) for item in data if data.count(item)>1}
+    
+    return result
+   
+
+    
 
 
 # code below left for your own usage and can be deleted at will
