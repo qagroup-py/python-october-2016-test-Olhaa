@@ -26,7 +26,10 @@ def isort(words):
     Returns:
         List with original items sorted
     """
-    return
+    x = sorted(words, key=str.lower)
+    
+    return x
+
 
 
 # code below left for your own usage and can be deleted at will
